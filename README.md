@@ -2,6 +2,8 @@
 
 [Morph](https://github.com/ankane/morph) client for Ruby
 
+[![Build Status](https://github.com/ankane/morph-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/morph-ruby/actions)
+
 ## Installation
 
 First, [install Morph](https://github.com/ankane/morph#building-from-source). For Homebrew, use:
