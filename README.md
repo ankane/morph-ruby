@@ -19,10 +19,15 @@ gem 'rice', github: 'jasonroelofs/rice' # for now for c++17
 
 ## Getting Started
 
-Generate a key pair
+Create a client
 
 ```ruby
 morph = Morph::Client.new
+```
+
+Generate a key pair
+
+```ruby
 morph.keygen
 ```
 
