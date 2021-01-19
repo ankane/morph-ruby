@@ -2,5 +2,6 @@ source "https://rubygems.org"
 
 gemspec
 
-# needed for c++17 until next release
-gem "rice", github: "jasonroelofs/rice"
+gem "rake"
+gem "rake-compiler"
+gem "minitest", ">= 5"

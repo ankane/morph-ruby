@@ -16,7 +16,6 @@ Add these lines to your application’s Gemfile:
 
 ```ruby
 gem 'morph-ruby'
-gem 'rice', github: 'jasonroelofs/rice' # for now for c++17
 ```
 
 ## Getting Started
