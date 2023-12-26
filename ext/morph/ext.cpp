@@ -1,19 +1,14 @@
 #include <morph/client.h>
 
-#include <rice/Array.hpp>
-#include <rice/Class.hpp>
-#include <rice/Constructor.hpp>
-#include <rice/Hash.hpp>
-#include <rice/Module.hpp>
-
-using namespace Rice;
+#include <rice/rice.hpp>
+#include <rice/stl.hpp>
 
 extern "C"
 void Init_ext() {
-  Module rb_mMorph = define_module("Morph");
+  Rice::Module rb_mMorph = Rice::define_module("Morph");
 
-  define_class_under<morph::Client>(rb_mMorph, "Client")
-    .define_constructor(Constructor<morph::Client>())
+  Rice::define_class_under<morph::Client>(rb_mMorph, "Client")
+    .define_constructor(Rice::Constructor<morph::Client>())
     .define_method("keygen", &morph::Client::keygen)
     .define_method("set", &morph::Client::set)
     .define_method("flushall", &morph::Client::flushall)
@@ -24,16 +19,15 @@ void Init_ext() {
       *[](morph::Client& self, const std::string& key) {
         auto value = self.get(key);
         // TODO fix in C++ library
-        return value.empty() ? Nil : String(value.c_str());
+        return value.empty() ? Rice::Nil : Rice::String(value.c_str());
       })
     .define_method(
       "keys",
       *[](morph::Client& self, const std::string& pattern) {
         auto keys = self.keys(pattern);
-        Array res;
+        Rice::Array res;
         for (auto &k : keys) {
-          // TODO fix in C++ library
-          res.push(k.c_str());
+          res.push(k);
         }
         return res;
       });
