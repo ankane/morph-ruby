@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.require_path  = "lib"
   spec.extensions    = ["ext/morph/extconf.rb"]
 
-  spec.required_ruby_version = ">= 2.5"
+  spec.required_ruby_version = ">= 3"
 
   spec.add_dependency "rice", ">= 4.1"
 end
