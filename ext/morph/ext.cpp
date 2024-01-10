@@ -14,13 +14,7 @@ void Init_ext() {
     .define_method("flushall", &morph::Client::flushall)
     .define_method("dbsize", &morph::Client::dbsize)
     .define_method("info", &morph::Client::info)
-    .define_method(
-      "get",
-      *[](morph::Client& self, const std::string& key) {
-        auto value = self.get(key);
-        // TODO fix in C++ library
-        return value.empty() ? Rice::Nil : Rice::String(value.c_str());
-      })
+    .define_method("get", &morph::Client::get)
     .define_method(
       "keys",
       *[](morph::Client& self, const std::string& pattern) {
