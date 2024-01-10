@@ -15,7 +15,7 @@ brew install ankane/brew/morph
 Add these lines to your application’s Gemfile:
 
 ```ruby
-gem 'morph-ruby'
+gem "morph-ruby"
 ```
 
 ## Getting Started
