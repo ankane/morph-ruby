@@ -9,7 +9,7 @@
 First, [install Morph](https://github.com/ankane/morph#building-from-source). For Homebrew, use:
 
 ```sh
-brew install ankane/brew/morph
+brew install ankane/brew/morph --head
 ```
 
 Add these lines to your application’s Gemfile:
