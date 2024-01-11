@@ -2,7 +2,7 @@
 
 [Morph](https://github.com/ankane/morph) client for Ruby
 
-[![Build Status](https://github.com/ankane/morph-ruby/workflows/build/badge.svg?branch=master)](https://github.com/ankane/morph-ruby/actions)
+[![Build Status](https://github.com/ankane/morph-ruby/actions/workflows/build.yml/badge.svg)](https://github.com/ankane/morph-ruby/actions)
 
 ## Installation
 
