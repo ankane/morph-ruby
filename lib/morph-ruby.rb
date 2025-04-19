@@ -2,4 +2,4 @@
 require "morph/ext"
 
 # modules
-require "morph/version"
+require_relative "morph/version"
