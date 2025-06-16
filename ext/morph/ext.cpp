@@ -1,3 +1,5 @@
+#include <string>
+
 #include <morph/client.h>
 
 #include <rice/rice.hpp>
