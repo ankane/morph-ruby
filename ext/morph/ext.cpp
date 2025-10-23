@@ -23,7 +23,7 @@ void Init_ext() {
         auto keys = self.keys(pattern);
         Rice::Array res;
         for (auto &k : keys) {
-          res.push(k);
+          res.push(k, false);
         }
         return res;
       });
