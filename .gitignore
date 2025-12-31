@@ -8,5 +8,6 @@
 /tmp/
 *.lock
 *.bundle
+*.so
 *.sk
 *.pk
