@@ -14,8 +14,9 @@ Rake::ExtensionTask.new("morph") do |ext|
 end
 
 task :remove_ext do
-  path = "lib/morph/ext.bundle"
-  File.unlink(path) if File.exist?(path)
+  Dir["lib/morph/ext.{bundle,so}"].each do |path|
+    File.unlink(path)
+  end
 end
 
 Rake::Task["build"].enhance [:remove_ext]
